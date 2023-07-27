@@ -1,10 +1,20 @@
+import styled from 'styled-components';
+import getCharacters from '../Hash/Hash';
+import styles from './stylesCard';
+
+const CardContainer = styled.div`
+    ${styles.CardContainer}
+` 
+
 const Card=()=>{
+    const characterList=getCharacters()
+    console.log(characterList)
     return(
         <>
-            <div className="card">
-                <h2>1</h2>
+            <CardContainer>
+                <h2>Hero Name</h2>
                 <img src="" alt="" />
-            </div>
+            </CardContainer>
         </>
     )
 }
